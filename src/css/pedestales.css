@@ -28,16 +28,45 @@ grid-container grid-item {
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: bold;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    font-size: 2.25rem;
+    line-height: normal;
+}
 
+grid-container grid-item .card {
+    background-color: transparent;
+}
 
+grid-container grid-item.active {
+    transform: scale(1.1);
+}
+grid-container grid-item.active .card {
+    border-color: hsl(280, 100%, 25%);
+    animation: blink 1s infinite;
+    animation-iteration-count: 100;
+}
+
+@keyframes blink {
+    50% {
+        border-color: hsl(280, 100%, 75%);
+    }
+}
+
+grid-container grid-item.active .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, hsl(280deg 100% 80%), hsl(280.71deg 75% 50%));
+    opacity: .5;
 }
 
 .modal-content {
-    background-color: #8f659c;
+    background-color: hsl(286, 22%, 50%);
     background-size: 50% auto;
     border-color: #8f659c;
 }
@@ -57,8 +86,9 @@ grid-container grid-item {
 }
 
 .card-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
+    line-height: 0.9rem;
 }
 
 .card-body {
