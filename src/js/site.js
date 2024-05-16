@@ -1,7 +1,7 @@
-window.addEventListener("beforeunload", (evento) => {
-    if (true) {
-        evento.preventDefault();
-        evento.returnValue = "";
-        return "";
-    }
-});
+// window.addEventListener("beforeunload", (evento) => {
+//     if (true) {
+//         evento.preventDefault();
+//         evento.returnValue = "";
+//         return "";
+//     }
+// });
