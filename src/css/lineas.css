@@ -23,7 +23,17 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.modal-body {
+  font-size: 22px;
+  line-height: 20px;
+}
+.modal-body p,
+.modal-body li{
+  text-align: justify;
+}
+.modal-body img{
+  max-height: 800px;
+}
 .left-line {
   border-right: 2px solid #bc7ccf;
   font-weight: 800;
