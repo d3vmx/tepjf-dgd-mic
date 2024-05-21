@@ -962,11 +962,17 @@
       </div>
     </grid-item>
   </grid-container>
+  <audio id="audio" class="object-fit-contain w-100" controls autoplay="autoplay" loop>
+    <source src="">
+    Your browser does not support the video tag.
+  </audio>
   <script src="libs/jquery/jquery-3.7.1.min.js"></script>
   <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
+    var audio = document.getElementById('audio');
     function Contenido(id) {
       var input = document.getElementsByTagName('content');
+      $('#audio source').attr('src', `https://tepjfpublico.blob.core.windows.net/mic/audios/Audio${id}.mp4`);
       for (let i = 0; i < input.length; i++) {
         input[i].style.display = 'none';
       }
@@ -979,8 +985,11 @@
       element.style.display = 'block';
       var elementbtn = document.getElementById(`b${id}`);
       elementbtn.classList.add('active');
+      
+      video.load();
+      video.play();
     }
-  </script>
+  </script>  
 </body>
 
 </html>
