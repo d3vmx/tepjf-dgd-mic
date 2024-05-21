@@ -10,7 +10,7 @@
 </head>
 
 <body oncontextmenu="return false;" style="background-image: url('img/fondo.jpg');">
-  <grid-container>
+  <grid-container class="position-relative">
     <grid-item id="content" style="grid-column: 3 / 7; grid-row: 2 / 5;">
       <content id="c00">
         Este mural plasma las imágenes de mujeres y hombres que impulsaron importantes cambios en nuestro país,
@@ -961,18 +961,18 @@
         <img src="img/Pedestales-24.jpg" class="card-img-top">
       </div>
     </grid-item>
+    <audio id="audio" class="object-fit-contain position-absolute bottom-0" controls autoplay="autoplay" style="width: 250px; right: 0;">
+      <source src="">
+      Your browser does not support the video tag.
+    </audio>
   </grid-container>
-  <audio id="audio" class="object-fit-contain w-100" controls autoplay="autoplay" loop>
-    <source src="">
-    Your browser does not support the video tag.
-  </audio>
   <script src="libs/jquery/jquery-3.7.1.min.js"></script>
   <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
     var audio = document.getElementById('audio');
     function Contenido(id) {
       var input = document.getElementsByTagName('content');
-      $('#audio source').attr('src', `https://tepjfpublico.blob.core.windows.net/mic/audios/Audio${id}.mp4`);
+      $('#audio source').attr('src', `https://tepjfpublico.blob.core.windows.net/mic/audios/Audio${id}.mp3`);
       for (let i = 0; i < input.length; i++) {
         input[i].style.display = 'none';
       }
@@ -985,11 +985,11 @@
       element.style.display = 'block';
       var elementbtn = document.getElementById(`b${id}`);
       elementbtn.classList.add('active');
-      
-      video.load();
-      video.play();
+
+      audio.load();
+      audio.play();
     }
-  </script>  
+  </script>
 </body>
 
 </html>
