@@ -49,7 +49,7 @@ content {
     height: 1080px;
     width: 960px;
     top: 0;
-    right: 0;
+    left: 960px;
     padding: 1rem 2rem;
     background-color: hsl(272deg 35% 15%);
     background-image: url('../img/Folleto/back.png');
