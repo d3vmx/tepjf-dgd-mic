@@ -1,7 +1,7 @@
 body,
 html {
-  height: 100%;
-  width: 100%;
+  width: 1920px;
+  height: 1080px;
   background-color: #774a83;
   overflow: hidden;
   font-family: Calibri, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

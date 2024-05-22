@@ -1,4 +1,6 @@
 body {
+    width: 3840px;
+    height: 1080px;
     display: flex;
     align-content: center;
     justify-content: center;
