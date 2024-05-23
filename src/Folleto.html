@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>TEPJF | MIC</title>
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -26,7 +26,9 @@
             <menu-item class="nav-link" id="m04" onclick="Menu('04')">
                 Museo incluyente
             </menu-item>
-            <div class="sb-sidenav-menu-heading">BLOQUES</div>
+            <hr>
+            <small class="sb-sidenav-menu-heading"
+                style="color:hsl(272deg 100% 90%); font-weight: bold;">BLOQUES</small>
             <menu-item class="nav-link" id="m05" onclick="Menu('05')">
                 <small>I. Un mural con igualdad</small>
             </menu-item>
@@ -235,12 +237,16 @@
         </grid-item>
 
         <h3 id="t08">IV. Vitrinas</h3>
-        <grid-item id="b14" onclick="Contenido('14','08')">
+        <p>
+            Además de las aportaciones en la lucha diaria y directa por sus derechos, muchas
+            mujeres participaron intelectualmente publicando textos de divulgación, tales como:
+        </p>
+        <!-- <grid-item id="b14" onclick="Contenido('14','08')">
             <p>
                 Además de las aportaciones en la lucha diaria y directa por sus derechos, muchas
                 mujeres participaron intelectualmente publicando textos de divulgación, tales como:
             </p>
-        </grid-item>
+        </grid-item> -->
         <grid-item id="b15" onclick="Contenido('15','08')">
             <p><strong>• Las Violetas y las Hijas del Anáhuac</strong><br>
                 “Las Hijas del Anáhuac” (1888) fue el primer periódico hecho por y para las mujeres
@@ -343,7 +349,7 @@
                 normalistas, obreras textiles, mujeres emprendedoras, activistas, periodistas,
                 muchas de ellas entregaron sus bienes por la causa. Muchas de ellas fueron
                 encarceladas y perseguidas por sus convicciones revolucionarias, e incluso varias
-                murieron por las causas que defendieron con gran compromiso ciudadano.                
+                murieron por las causas que defendieron con gran compromiso ciudadano.
             </p>
         </grid-item>
         <grid-item id="b25" onclick="Contenido('25','11')">
@@ -550,6 +556,7 @@
                 inpubtntm[i].classList.remove('active');
             }
             try {
+                $(`#c${id}`).hide().fadeIn(1500);
                 var element = document.getElementById(`c${id}`);
                 element.classList.add('d-flex');
                 element.classList.remove('d-none');
@@ -585,7 +592,7 @@
             console.log(position);
             $('html,body').animate({
                 scrollTop: position - 20
-            }, 'slow');
+            }, 1500);
         }
     </script>
 </body>
