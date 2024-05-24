@@ -3,6 +3,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: hsl(272deg 25% 35%);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 * {
@@ -13,6 +20,7 @@ header {
     position: fixed;
     height: 100%;
     width: 10%;
+
 }
 
 nav {
@@ -22,6 +30,13 @@ nav {
     color: hsl(272deg 100% 95%);
     padding: 2rem 1rem;
     overflow-y: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar {
+    display: none;
 }
 
 nav .nav-link {
@@ -38,16 +53,10 @@ main {
     width: 40%;
     margin-left: 10%;
     text-align: justify;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     padding: 1rem 2rem;
     background-color: hsl(272deg 25% 35%);
     color: hsl(272deg 100% 100%);
     font-size: 22px;
-}
-
-main::-webkit-scrollbar {
-    display: none;
 }
 
 content {
