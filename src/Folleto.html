@@ -556,7 +556,6 @@
                 inpubtntm[i].classList.remove('active');
             }
             try {
-                $(`#c${id}`).hide().fadeIn(1500);
                 var element = document.getElementById(`c${id}`);
                 element.classList.add('d-flex');
                 element.classList.remove('d-none');
@@ -589,10 +588,9 @@
             }
 
             var position = $(`#t${id}`).position().top;
-            console.log(position);
             $('html,body').animate({
                 scrollTop: position - 20
-            }, 1500);
+            }, 800);
         }
     </script>
 </body>
